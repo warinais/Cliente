@@ -3,7 +3,7 @@ const  persona = {
     edad : 40,
     profesion : "Autónomo",
     saludar(){
-        return "Hola, me llamo+ $(this.nombre)";
+        return `Hola, me llamo ${this.nombre}`;
     }
-
-}
+};
+console.log(persona.saludar());
