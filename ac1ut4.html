@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<script>  
+
+    //Vamos a pedir los número que queramos y los guardamos en un array
+
+    let numeros = [];
+    let numero = prompt("Escribe un número o escribe 'close' para terminar: ");
+
+    while (numero!=="close") {
+        numeros.push(parseInt(numero));
+        numero = prompt("Escribe otro número o escribe 'close' para terminar: ");
+    }
+
+    console.log("Los números introducidos son: ", numeros);
+
+    //Función que suma todos los números del array
+
+    function sumaNumeros(array) {
+        let total = 0;
+        for (let i = 0; i < array.length; i++) {
+            total += array[i];
+        }
+        return total;
+    }
+
+    //Llamamos a la funcion que suma 
+
+    let resultadoSuma = sumaNumeros(numeros);
+    console.log("La suma de los números introducidos es: ", resultadoSuma);
+
+    //Función para saber cual es el número introducido más grande
+
+    function numeroGrande(array) {
+        let grande = array[0];
+        for (let i = 1; i < array.length; i++) {
+            if (array[i] > grande) {
+                grande = array[i];
+            }
+        }
+        return grande;
+    }
+
+    //Llamamos a la funcion numeroGrande
+
+    let resultadoGrande = numeroGrande(numeros);
+    console.log("El número más grande es: ", resultadoGrande);
+
+    //Función para saber cual es el número introducido más pequeño
+
+    function numeroPeque(array) {
+        let peque = array[0];
+        for (let i = 1; i < array.length; i++) {
+            if (array[i] < peque) {
+                peque = array[i];
+            }
+        }
+        return peque;
+    }
+
+    //Llamamos a la funcion numeroPeque
+
+    let resultadoPeque = numeroPeque(numeros);
+    console.log("El número más pequeño es: ", resultadoPeque);
+
+    //Función para calcular la media de los números
+
+    function mediaNumeros(array) {
+        let total = 0;
+
+        if (array.length === 0) {
+            return 0; // Evitar división por cero si el array está vacío
+        }else {
+            for (let i = 0; i < array.length; i++) {
+                total += array[i];
+            }
+            return total / array.length;
+        }
+    }
+
+    //Llamamos a la funcion mediaNumeros
+
+    let resultadoMedia = mediaNumeros(numeros);
+
+    if (resultadoMedia === 0) {
+        console.log("No hay números en el array.");
+    } else {
+    console.log("La media de los números es: ", resultadoMedia);
+    }
+</script>
+
+</body>
+</html>
