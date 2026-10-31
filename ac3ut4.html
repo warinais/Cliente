@@ -39,6 +39,22 @@
         }
     }
 
+    //Creamos varias figuras en una lista
+
+    let figuras = [
+        new Cuadrado(5),
+        new Circulo(3),
+        new Cuadrado(10),
+        new Circulo(7),
+        new Cuadrado(26),
+        new Circulo(12)
+    ];
+
+    //Mostramos la lista de figuras
+    for (let figura of figuras){
+        console.log("Área de la figura: " + figura.area());
+    }
+
 </script>
 
 </body>
