@@ -34,6 +34,29 @@ for (let i = 0; i < 3; i++) {
 
 //Mostramos la lista
 console.log(alumnos);
+
+    
+    //El alumno con la nota más alta
+    let nombreAlumno;
+    let notaAlumno = -1;
+
+    for (let alumno of alumnos){
+        if (alumno.nota > notaAlumno) {
+            nombreAlumno = alumno.nombre;
+            notaAlumno = alumno.nota;
+        }
+    }
+
+    console.log("El alumno con la nota más alta es: " + nombreAlumno + ", con una nota de: " + notaAlumno);
+
+//Media de notas
+    let sumaNotas = 0;
+    for (let alumno of alumnos) {
+        sumaNotas = sumaNotas+alumno.nota;
+    }
+    let mediaNotas = sumaNotas / alumnos.length;
+    console.log("La media de notas es: " + mediaNotas);
+
     </script>
 
 
