@@ -7,35 +7,34 @@
 </head>
 <body>
     <script>
-        //Creamos la clase
-class Alumno{
+    //Creamos la clase
+    class Alumno{
     constructor(nombre, edad, nota){
         this.nombre = nombre;
         this.edad = edad;
         this.nota = nota;
+        }
     }
-}
 
-let alumnos = [];
+    let alumnos = [];
 
-//Introduce los datos de los tres alumnos
-for (let i = 0; i < 3; i++) {
-    let nombre = prompt("Ingrese el nombre del alumno:");
-    let edad = parseInt(prompt("Ingrese la edad del alumno:"));
-    let nota = parseFloat(prompt("Ingrese la nota del alumno:"));
+    //Introduce los datos de los tres alumnos
+    for (let i = 0; i < 3; i++) {
+        let nombre = prompt("Ingrese el nombre del alumno:");
+        let edad = parseInt(prompt("Ingrese la edad del alumno:"));
+        let nota = parseFloat(prompt("Ingrese la nota del alumno:"));
 
-    //Creamos el objeto con los datos introducidos
-    let nuevoAlumno = new Alumno(nombre, edad, nota);
+        //Creamos el objeto con los datos introducidos
+        let nuevoAlumno = new Alumno(nombre, edad, nota);
 
-    //Lo añadimos a la lista
-    alumnos.push(nuevoAlumno);
+        //Lo añadimos a la lista
+        alumnos.push(nuevoAlumno);
 
-}
+    }
 
-//Mostramos la lista
-console.log(alumnos);
+    //Mostramos la lista
+    console.log(alumnos);
 
-    
     //El alumno con la nota más alta
     let nombreAlumno;
     let notaAlumno = -1;
@@ -49,7 +48,7 @@ console.log(alumnos);
 
     console.log("El alumno con la nota más alta es: " + nombreAlumno + ", con una nota de: " + notaAlumno);
 
-//Media de notas
+    //Media de notas
     let sumaNotas = 0;
     for (let alumno of alumnos) {
         sumaNotas = sumaNotas+alumno.nota;
@@ -58,7 +57,5 @@ console.log(alumnos);
     console.log("La media de notas es: " + mediaNotas);
 
     </script>
-
-
 </body>
 </html>
