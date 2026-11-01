@@ -20,6 +20,16 @@
         }
     }
 
+    //Creamos la subclase Coche, con atributo también privado
+    class Coche extends Vehiculo {
+        constructor(marca, velocidad, puertas) {
+            super(marca, velocidad);
+            this.#puertas = puertas;
+        }
+        mostrarInfo() {
+            return `${super.mostrarInfo()}, Puertas: ${this.#puertas}`;
+        }
+    }
 
 
 
