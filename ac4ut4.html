@@ -22,6 +22,27 @@
         mostrarInfo() {
             return `Marca: ${this.#marca}, Velocidad: ${this.#velocidad}`;
         }
+
+            //Getters && Setters
+        get marca() {
+            return this.#marca;
+        }
+
+        get velocidad() {
+            return this.#velocidad;
+        }
+
+        set marca(marca) {
+            this.#marca = marca;
+        }
+
+        set velocidad(velocidad) {
+            if (velocidad>=0){
+                this.#velocidad = velocidad;
+            } else {
+                console.log("La velocidad debe ser 0 o más");
+            }
+        }
     }
 
     //Creamos la subclase Coche, con atributo también privado
@@ -32,13 +53,27 @@
         }
 
         #puertas;
-        
+
         mostrarInfo() {
             return `${super.mostrarInfo()}, Puertas: ${this.#puertas}`;
         }
+
+        //Getters && Setters
+
+        get puertas() {
+            return this.#puertas;
+        }
+
+        set puertas(puertas) {
+            this.#puertas = puertas;
+        }
+
     }
 
+    //Creamos un objeto y mostramos sus datos
+    const coche1 = new Coche("Opel", 150, 5);
 
+    console.log(coche1.mostrarInfo());
 
 </script>
 
