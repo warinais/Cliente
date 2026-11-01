@@ -15,6 +15,10 @@
             this.#marca = marca;
             this.#velocidad = velocidad;
         }
+
+        #marca;
+        #velocidad;
+
         mostrarInfo() {
             return `Marca: ${this.#marca}, Velocidad: ${this.#velocidad}`;
         }
@@ -26,6 +30,9 @@
             super(marca, velocidad);
             this.#puertas = puertas;
         }
+
+        #puertas;
+        
         mostrarInfo() {
             return `${super.mostrarInfo()}, Puertas: ${this.#puertas}`;
         }
