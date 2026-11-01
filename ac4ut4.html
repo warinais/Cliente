@@ -71,10 +71,16 @@
     }
 
     //Creamos un objeto y mostramos sus datos
-    const coche1 = new Coche("Opel", 150, 5);
 
-    console.log(coche1.mostrarInfo());
+    let coches = [
+        new Coche("Opel", 120, 5),
+        new Coche("Ford", 150, 3),
+        new Coche("Honda", 180, 4)
+    ];
 
+    for (let coche of coches){
+        console.log(coche.mostrarInfo());
+    }
 </script>
 
 </body>
