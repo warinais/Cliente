@@ -14,7 +14,10 @@
     <button id="boton">Cambia de color el fondo</button>
 
     <!-- Campo de texto para realizarlo con <p> -->
-
+    <input type="text" id="campoTexto" placeholder="Escribe aquí">
+    
+    <!--Párrafo donde se ve el texto-->
+    <p id="textoMostrado"></p>
 
     <script>
         let color = 0;
@@ -30,7 +33,14 @@
         }
         
         document.getElementById("boton").onclick = cambiarColor;
-        
+
+        function mostrarTexto() {
+            let texto = document.getElementById("campoTexto").value;
+            document.getElementById("textoMostrado").textContent = texto;
+        }
+
+        document.getElementById("campoTexto").addEventListener("input", mostrarTexto);
+
     </script>
 </body>
 </html>
