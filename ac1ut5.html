@@ -9,11 +9,17 @@
 
 <h1>Mi web para la UT5</h1>
 
+
+    <!-- Botón para cambiar el color de fondo -->
     <button id="boton">Cambia de color el fondo</button>
+
+    <!-- Campo de texto para realizarlo con <p> -->
+
 
     <script>
         let color = 0;
-        document.getElementById("boton").onclick = function() {
+        
+        function cambiarColor() {
             if (color == 0) {
                 document.body.style.backgroundColor = "lightgreen";
                 color = 1;
@@ -21,7 +27,10 @@
                 document.body.style.backgroundColor = "red";
                 color = 0;
             }
-        };
+        }
+        
+        document.getElementById("boton").onclick = cambiarColor;
+        
     </script>
 </body>
 </html>
