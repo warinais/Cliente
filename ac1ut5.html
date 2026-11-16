@@ -12,8 +12,15 @@
     <button id="boton">Cambia de color el fondo</button>
 
     <script>
+        let color = 0;
         document.getElementById("boton").onclick = function() {
-            document.body.style.backgroundColor = "lightblue";
+            if (color == 0) {
+                document.body.style.backgroundColor = "lightgreen";
+                color = 1;
+            } else {
+                document.body.style.backgroundColor = "lightred";
+                color = 0;
+            }
         };
     </script>
 </body>
