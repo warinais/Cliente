@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UT5</title>
+</head>
+<body>
+
+<h1>Actividad 3 de la UT5</h1>
+
+<!-- Formulario con campos de nombre y email -->
+<form id="formulario">
+
+    <!-- Campo de texto para el nombre -->
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" required><br><br>
+
+    <!-- Campo de texto para el email -->
+    <label for="email">Email:</label>
+    <input type="email" id="email"><br><br>
+
+    <!-- Botón de envío del formulario -->
+    <button type="submit">Enviar</button>
+
+</form>
+
+<script>
+
+//Seleccionamos el formulario
+document.getElementById("formulario").addEventListener("submit", function(event) {
+
+    // Evitamos que el formulario se envíe de la manera tradicional
+    event.preventDefault(); 
+
+    // Obtenemos los valores de los campos
+    let nombre = document.getElementById("nombre").value;
+    let email = document.getElementById("email").value;
+
+    //Expresión regular para validar el email, es la que el programa me ha sugerido
+    let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        alert("Por favor, introduce un email válido.");
+        return;
+    }
+
+    //si todo lo anterior es correcto, se muestra este mensaje
+    alert("Formulario enviado correctamente. Nombre: " + nombre + ", Email: " + email);
+});
+
+
+</script>
+</body>
+</html>
