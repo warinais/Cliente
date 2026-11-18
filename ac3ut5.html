@@ -37,17 +37,26 @@ document.getElementById("formulario").addEventListener("submit", function(event)
     let nombre = document.getElementById("nombre").value;
     let email = document.getElementById("email").value;
 
-    //Expresión regular para validar el email, es la que el programa me ha sugerido
-    let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-        alert("Por favor, introduce un email válido.");
-        return;
+
+    //Usamos Try Catch para capturar errores
+    try {
+
+        //Expresión regular para validar el email, es la que el programa me ha sugerido
+        let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        //Si el email no cumple con la expresión regular, se lanza un error
+        if (!emailRegex.test(email)) {
+            throw new Error("Por favor, introduce un email válido.");
+        }
+
+        //si todo lo anterior es correcto, se muestra este mensaje
+        alert("Formulario enviado correctamente. Nombre: " + nombre + ", Email: " + email);
+    }catch (error) {
+        
+        //Capturamos el error y mostramos un mensaje
+        alert("Ha ocurrido un error: " + error.message);
     }
-
-    //si todo lo anterior es correcto, se muestra este mensaje
-    alert("Formulario enviado correctamente. Nombre: " + nombre + ", Email: " + email);
 });
-
 
 </script>
 </body>
