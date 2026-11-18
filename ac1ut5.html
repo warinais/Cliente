@@ -4,21 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UT5</title>
+    <style>
+        section{
+            margin-bottom: 35px;
+            border-bottom: 1px solid black;
+            padding-bottom: 15px;
+        }
+    </style>
 </head>
 <body>
 
 <h1>Mi web para la UT5</h1>
 
-
-    <!-- Botón para cambiar el color de fondo -->
-    <button id="boton">Cambia de color el fondo</button>
-
-    <!-- Campo de texto para realizarlo con <p> -->
-    <input type="text" id="campoTexto" placeholder="Escribe aquí">
+    <section>
+        <!-- Botón para cambiar el color de fondo -->
+        <button id="boton">Cambia de color el fondo</button>
+        </section>
     
-    <!--Párrafo donde se ve el texto-->
-    <p id="textoMostrado"></p>
+    <section>
+        <!-- Campo de texto para realizarlo con <p> -->
+        <input type="text" id="campoTexto" placeholder="Escribe aquí">
+        
+        <!--Párrafo donde se ve el texto-->
+        <p id="textoMostrado"></p>
 
+    </section>
     <script>
         let color = 0;
         
